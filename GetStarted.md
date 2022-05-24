@@ -173,3 +173,6 @@ module.exports = {
   }
 
 7. npm start
+
+=== AOS ===
+-npm install aos --save
