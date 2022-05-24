@@ -2,4 +2,10 @@
     height: 10vh;
     width: 100%;
     background-color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Header h2{
+    font-size: 35px;
 }
