@@ -1,0 +1,29 @@
+.Footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color1);
+    color: var(--color3);
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.Footer-social{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.Footer-git a{
+    color: rgb(36, 36, 36);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.Footer-git p{
+    margin-left: 5px;
+}
