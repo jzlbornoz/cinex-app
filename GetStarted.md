@@ -221,3 +221,8 @@ module.exports = {
     <link rel="manifest" href="./manifest.json">
     <link rel="shortcut icon" href="../src/assets/LOGO192.png">
     <link rel="apple-touch-icon" href="../src/assets/LOGO512.png" />
+
+  === INSTALACION REACT-ROUTER ===
+  1. npm install react-router-dom@6
+  2. Create folder 'Routes' and move App
+  3. 
