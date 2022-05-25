@@ -184,3 +184,40 @@ module.exports = {
 4. create ".github" folder and "workflow"
 5. create deploy-to-firebase.yml
 6. firebase login:ci
+7. create the secret in the repository
+8. commit
+
+=== ADD the manifest for PWA ===
+1. create 'manifest.json' in public folder
+{
+    "name": "Cinex",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./index.html",
+    "short_name": "CNX",
+    "description": "We are your best option",
+    "background_color": "#030303",
+    "prefer_related_applications": false,
+    "icons": [
+      {
+        "src": "../src/assets/LOGO512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "../src/assets/LOGO192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+      }]
+  }
+  2.  Add the following scripts to index html
+  meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="black" />
+    <meta name="apple-mobile-web-app-title" content="CNX" />
+    <meta name="apple-mobile-web-app-capable" content="false" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" href="../src/assets/LOGO192.png">
+    <link rel="apple-touch-icon" href="../src/assets/LOGO512.png" />
