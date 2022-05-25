@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 
 const Review = () => {
+  const { state } = useContext(AppContext);
+  const { selected } = state;
   return (
     <section className="Review">
-        REVIEW
+      {selected.map(movie => (
+        <div>{movie.title}</div>
+      ))}
     </section>
   )
 }
 
-export  {Review}
+export { Review }
