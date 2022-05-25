@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../style/components/Header.css';
 
 const Header = () => {
   return (
     <section className='Header'>
-      <h2>CINEX</h2>
-      </section>
+      <Link to='/'>
+        <h2>CINEX</h2>
+      </Link>
+    </section>
   )
 }
 
-export  {Header};
+export { Header };

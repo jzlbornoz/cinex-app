@@ -12,8 +12,10 @@ const Landing = () => {
             <p>Trending</p>
             <div className="Landing-grid">
                 {!loading ? movies.map(movie => (
-                    <Card key={movie.id} film={movie} />
-                )) : <Loading/>}
+                    <div data-aos="fade-up" key={movie.id}>
+                        <Card film={movie} />
+                    </div>
+                )) : <Loading />}
             </div>
         </section>
     )

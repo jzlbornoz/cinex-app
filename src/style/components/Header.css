@@ -8,4 +8,9 @@
 }
 .Header h2{
     font-size: 35px;
+    color: var(--color3);
 }
+.Header a{
+    text-decoration: none;
+}
+
