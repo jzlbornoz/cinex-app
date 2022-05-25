@@ -1,0 +1,20 @@
+.Loading{
+    color: var(--color2);
+    font-size: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 75vh;
+}
+.spinning{
+    animation: spinner 1s linear infinite;
+    position: absolute;
+    margin-top: 10%;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}

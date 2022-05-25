@@ -176,3 +176,11 @@ module.exports = {
 
 === AOS ===
 -npm install aos --save
+
+==== Deploy to production ====
+1. sudo npm install -g firebase-tools
+2. firebase login
+3. firebase init
+4. create ".github" folder and "workflow"
+5. create deploy-to-firebase.yml
+6. firebase login:ci
