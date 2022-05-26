@@ -225,4 +225,11 @@ module.exports = {
   === INSTALACION REACT-ROUTER ===
   1. npm install react-router-dom@6
   2. Create folder 'Routes' and move App
-  3. 
+  3. npm i source-map-loader
+  4. add in dev dependencies
+  5. add in rules in webpack config
+  {
+    test: /\.js$/,
+    enforce: 'pre',
+    use: ['source-map-loader'],
+  },
