@@ -3,6 +3,11 @@
     flex-direction: column;
     justify-content: center;
 }
+.Billboard{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 28px;
+}
 
 .Billboard-grid {
     display: flex;
