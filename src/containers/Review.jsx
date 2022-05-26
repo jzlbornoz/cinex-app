@@ -9,7 +9,7 @@ const Review = () => {
   return (
     <section className="Review">
       {selected.map(movie => (
-        <section className='Review-wrapped' key={movie.id + 1}>
+        <section className='Review-wrapped' key={movie.id + 1} data-aos="fade-up">
           <img src={Img + movie.poster_path} alt={movie.title} />
           <div className="Review-text">
             <h3>{movie.title}</h3>

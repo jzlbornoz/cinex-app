@@ -1,19 +1,48 @@
 .Landing {
+    height: 90vh;
+    background-color: var(--color1);
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: center;
 }
-.Landing p{
-    text-align: center;
-    font-size: 35px;
-    font-weight: 900;
-    color: var(--color6);
-    padding: 20px 0px 0px 10px;
-}
-.Landing-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10%;
+
+.Landing-wrapped {
+    height: 100%;
     position: relative;
+}
+
+.Landing-wrapped h2 {
+    position: absolute;
+    top: 25vh;
+    left: 10px;
+    font-size: 32px;
+}
+
+.Landing-wrapped p {
+    position: absolute;
+    top: 35vh;
+    padding: 10px;
+    font-size: 26px;
+}
+.Landing-wrapped span{
+    color: rgb(90, 90, 90);
+}
+
+.Landing-button {
+    position: absolute;
+    top: 50vh;
+    left: 10px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 18px 32px 18px 32px;
+    color: var(--color3);
+}
+.Landing-button:hover{
+    background: none;
+    border: 1px solid var(--color3);
 }

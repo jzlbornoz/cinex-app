@@ -1,0 +1,13 @@
+.Billboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Billboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10%;
+    position: relative;
+}
