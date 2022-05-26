@@ -12,19 +12,23 @@ const Billboard = () => {
     const handleSelect = item => () => {
         toSelect(item);
     }
-    if (movies.length > 4) {
+    if (movies.length >= 20) {
         return (
             <section className='Billboard' data-aos="fade-up">
                 <p>MOVIES</p>
                 <div className="Billboard-grid">
                     {movies.map(movie => (
-                        <Card film={movie} key={movie.id} onClick={handleSelect(movie)} />
+                        <div key={movie.id} onClick={handleSelect(movie)}>
+                            <Card film={movie} />
+                        </div>
                     ))}
                 </div>
                 <p>SERIES</p>
                 <div className="Billboard-grid">
                     {series.map(serie => (
-                        <Card film={serie} key={serie.id} onClick={handleSelect(serie)} />
+                        <div key={serie.id} onClick={handleSelect(serie)} >
+                            <Card film={serie} />
+                        </div>
                     ))}
                 </div>
             </section>

@@ -233,3 +233,6 @@ module.exports = {
     enforce: 'pre',
     use: ['source-map-loader'],
   },
+
+  === React Lazy Load Image Component ===
+  1. npm i --save react-lazy-load-image-component
