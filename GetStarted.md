@@ -236,3 +236,9 @@ module.exports = {
 
   === React Lazy Load Image Component ===
   1. npm i --save react-lazy-load-image-component
+
+  === WORKBOX Service worker ===
+  se implemento el service worker
+  1. npm install workbox-webpack-plugin --save-dev
+  2.  Let's add the Workbox webpack plugin and adjust the webpack.config.js file:
+    https://webpack.js.org/guides/progressive-web-application/
