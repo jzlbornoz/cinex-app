@@ -2,7 +2,7 @@
   "name": "Cinex",
   "orientation": "portrait",
   "display": "standalone",
-  "start_url": "./index.html",
+  "start_url": "/",
   "short_name": "CNX",
   "description": "We are your best option",
   "background_color": "#030303",
@@ -24,7 +24,8 @@
     {
       "src": "./LOGO192.png",
       "sizes": "144x144",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
