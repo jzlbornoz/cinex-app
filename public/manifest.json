@@ -10,10 +10,9 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "./LOGO512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "./favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
     },
     {
       "src": "./LOGO192.png",
@@ -22,9 +21,10 @@
       "purpose": "any maskable"
     },
     {
-      "src": "./favicon.ico",
-      "sizes": "64x64",
-      "type": "image/x-icon"
+      "src": "./LOGO512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
