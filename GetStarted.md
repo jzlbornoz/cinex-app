@@ -242,3 +242,57 @@ module.exports = {
   1. npm install workbox-webpack-plugin --save-dev
   2.  Let's add the Workbox webpack plugin and adjust the webpack.config.js file:
     https://webpack.js.org/guides/progressive-web-application/
+  3. create service-worker.js in src:
+
+  /**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+
+// Precarga la app
+self.__precacheManifest = [].concat(self.__precacheManifest || [])
+workbox.precaching.suppressWarnings()
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {})
+
+// App Shell
+workbox.routing.registerNavigationRoute('/index.html')
+
+// La API usa Stale While Revalidate para mayor velocidad
+workbox.routing.registerRoute(/^https?:\/\/www.themealdb.com\/api\/.*/, workbox.strategies.staleWhileRevalidate(),
+ 'GET')
+
+// Last fuentes van con Cache First y vencen al mes
+workbox.routing.registerRoute(/^https:\/\/fonts.(?:googleapis|gstatic).com\/(.*)/, 
+  workbox.strategies.cacheFirst({
+    cacheName: 'google-fonts-cache',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxAgeSeconds: 30 * 24 * 60 * 60
+      })
+    ]
+  }),
+  'GET')
+
+// Todo lo demás usa Network First
+workbox.routing.registerRoute(/^https?.*/,
+  workbox.strategies.networkFirst(), 'GET')
+
+  4. create config-overrites.jsx in root:
+
+  const {defaultInjectConfig, rewireWorkboxInject} = require('react-app-rewire-workbox')
+const path = require('path');
+
+module.exports = function override(config, env) {
+  if (env === "production") {
+    console.log("Generating Service Worker")
+
+    const workboxConfig = {
+      ...defaultInjectConfig,
+      swSrc: path.join(__dirname, 'src', 'service-worker.js')
+    }
+    config = rewireWorkboxInject(workboxConfig)(config, env)
+  }
+
+  return config;
+}
