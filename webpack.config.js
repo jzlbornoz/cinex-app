@@ -67,7 +67,7 @@ module.exports = {
       directory: path.join(__dirname, 'public'),
     },
     compress: true,
-    port: 3007,
+    port: 3004,
     historyApiFallback: true,
   },
 };
