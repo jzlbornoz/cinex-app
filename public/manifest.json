@@ -15,9 +15,9 @@
       "type": "image/x-icon"
     },
     {
-      "src": "./LOGO512.png",
+      "src": "./LOGO512.webp",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/webp",
       "purpose": "any maskable"
     }
   ]
