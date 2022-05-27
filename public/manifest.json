@@ -15,10 +15,10 @@
       "type": "image/x-icon"
     },
     {
-      "src": "./LOGO512.webp",
+      "src": "./logo512.webp",
       "sizes": "512x512",
-      "type": "image/webp",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
