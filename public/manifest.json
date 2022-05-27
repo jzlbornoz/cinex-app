@@ -6,24 +6,25 @@
     "short_name": "CNX",
     "description": "We are your best option",
     "background_color": "#030303",
+    "theme_color": "#030303", 
     "prefer_related_applications": false,
     "icons": [
       {
         "src": "../src/assets/LOGO512.png",
         "sizes": "512x512",
         "type": "image/png",
-        "purpose": "maskable"
+        "purpose": "any maskable"
       },
       {
         "src": "../src/assets/LOGO192.png",
         "sizes": "192x192",
         "type": "image/png",
-        "purpose": "maskable"
+        "purpose": "any maskable"
       },
       {
-        "src": "../src/assets/LOGO144.png",
+        "src": "./LOGO144.png",
         "sizes": "144x144",
         "type": "image/png",
-        "purpose": "maskable"
+        "purpose": "any maskable"
       }]
   }
