@@ -1,24 +1,28 @@
 {
-  "name": "Cinex",
-  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "categories": ["lifestyle", "music"],
+  "description": "Your best option",
+  "dir": "ltr",
+  "display_override": ["standalone", "fullscreen"],
   "display": "standalone",
-  "start_url": "./index.html",
-  "short_name": "CNX",
-  "description": "We are your best option",
-  "background_color": "#030303",
-  "theme_color": "#030303",
-  "prefer_related_applications": false,
   "icons": [
     {
-      "src": "./favicon.ico",
-      "sizes": "64x64",
-      "type": "image/x-icon"
+      "src": "./LOGO192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
-      "src": "./logo512.webp",
-      "sizes": "512x512",
-      "type": "image/webp",
-      "purpose": "any"
+      "src": "LOGO512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
-  ]
+  ],
+  "lang": "en",
+  "name": "CINEX",
+  "orientation": "portrait",
+  "prefer_related_application": false,
+  "scope": "/",
+  "short_name": "CNX",
+  "start_url": "/",
+  "theme_color": "black"
 }
