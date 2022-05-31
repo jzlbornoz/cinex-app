@@ -5,24 +5,32 @@ import initialState from "../initialState";
 const useData = () => {
     const [movies, setMovies] = useState([]);
     const [series, setSeries] = useState([]);
+    const [trending, setTrending] = useState([]);
     const [loading, setLoading] = useState(true);
     const [state, setState] = useState(initialState);
     const callMovies = "/discover/movie";
     const callSeries = "/discover/tv";
+    const callTrending = "/trending/all/day";
 
     //call the movies
     useEffect(() => {
         useGet(callMovies).then(data => {
             setMovies(data.results);
-            setLoading(false)
-            console.log(data.results);
         })
     }, [])
+
     //call the series
     useEffect(() => {
         useGet(callSeries).then(data => {
             setSeries(data.results);
-            setLoading(false)
+        })
+    }, [])
+
+    //call the trending
+    useEffect(() => {
+        useGet(callTrending).then(data => {
+            setTrending(data.results);
+            setLoading(false);
             console.log(data.results);
         })
     }, [])
@@ -41,6 +49,7 @@ const useData = () => {
         state,
         toSelect,
         series,
+        trending,
     });
 };
 

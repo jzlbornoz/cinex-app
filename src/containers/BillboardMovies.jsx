@@ -6,7 +6,7 @@ import { Card } from '../components/Card';
 import '../style/components/Billboard.css';
 
 
-const Billboard = () => {
+const BillboardMovies = () => {
 
     const { movies, toSelect, series } = useContext(AppContext);
     const handleSelect = item => () => {
@@ -41,4 +41,4 @@ const Billboard = () => {
 }
 
 
-export { Billboard };
+export { BillboardMovies };

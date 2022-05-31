@@ -5,7 +5,7 @@ import '../style/components/Header.css';
 const Header = () => {
   return (
     <section className='Header'>
-      <Link to='/billboard'>
+      <Link to='/'>
         <h2>CINEX</h2>
       </Link>
     </section>

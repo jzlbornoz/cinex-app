@@ -6,7 +6,7 @@ const Error = () => {
     return (
         <section className='Error'>
             <h2>Oops, tuvimos un error.</h2>
-            <Link to='/billboard'>
+            <Link to='/'>
                 <div className='Error-icon'>
                     <i className="fa-solid fa-arrow-rotate-right" />
                 </div>

@@ -9,7 +9,7 @@ const Card = ({ film }) => {
         <Link to='/review'>
             <section className="Card" >
              <LazyLoadImage src={Img} />
-                <div className='Card-title'><h3>{film.title}</h3></div>
+                <div className='Card-title'><h3>{film.title ? film.title : film.name}</h3></div>
             </section>
         </Link>
     )

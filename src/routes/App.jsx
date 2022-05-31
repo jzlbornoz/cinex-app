@@ -7,7 +7,8 @@ import { AppContext } from '../context/AppContext';
 import { useData } from '../hooks/useData';
 import { Error } from '../containers/Error';
 import { Review } from '../containers/Review';
-import { Billboard } from '../components/Billboard';
+import { BillboardSeries } from '../containers/BillboardSeries';
+import { BillboardMovies } from '../containers/BillboardMovies';
 import './App.css';
 
 const App = () => {
@@ -19,7 +20,8 @@ const App = () => {
                     <Header />
                     <Routes>
                         <Route exact path="/" element={<Landing />} />
-                        <Route exact path="/billboard" element={<Billboard />} />
+                        <Route exact path="/billboard/series" element={<BillboardSeries />} />
+                        <Route exact path="/billboard/movies" element={<BillboardMovies />} />
                         <Route exact path="/review" element={<Review />} />
                         <Route path="*" element={<Error />} />
                     </Routes>

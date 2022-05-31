@@ -1,48 +1,58 @@
 .Landing {
-    height: 90vh;
+    height: auto;
     background-color: var(--color1);
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.Landing-wrapped {
-    height: 100%;
-    position: relative;
-}
-
-.Landing-wrapped h2 {
-    position: absolute;
-    top: 25vh;
-    left: 10px;
-    font-size: 32px;
-}
-
-.Landing-wrapped p {
-    position: absolute;
-    top: 35vh;
-    padding: 10px;
-    font-size: 26px;
-}
-.Landing-wrapped span{
-    color: rgb(90, 90, 90);
-}
-
-.Landing-button {
-    position: absolute;
-    top: 50vh;
-    left: 10px;
-    padding: 10px;
-    font-size: 18px;
-    background-color: #7f5a83;
-    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    padding: 18px 32px 18px 32px;
+.Landing a{
+    text-decoration: none;
     color: var(--color3);
 }
-.Landing-button:hover{
-    background: none;
-    border: 1px solid var(--color3);
+
+.Landing-menu {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+.Landing-menu div {
+    width: 100%;
+    font-size: 25px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.Landing-movies {
+    background-color: #42378f;
+background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+    border-radius: 20px;
+}
+
+.Landing-series {
+    background-color: #c73e1d;
+background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
+
+    border-radius: 20px;
+}
+
+.Landing h1{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.Landing-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10%;
+    position: relative;
 }
