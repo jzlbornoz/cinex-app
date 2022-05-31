@@ -296,3 +296,7 @@ module.exports = function override(config, env) {
 
   return config;
 }
+
+=== Se agrego el plugin para pasar los logos a produccion ===
+= Se tuvo problemas para que sea instalable, se tuvo que agregar el siguiente plugin
+- npm i copy-webpack-plugin -D
