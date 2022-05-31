@@ -1,7 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const WorkboxPlugin = require('workbox-webpack-plugin');
+
 
 module.exports = {
   entry: './src/index.js',
@@ -59,6 +61,15 @@ module.exports = {
       // and not allow any straggling "old" SWs to hang around
       clientsClaim: true,
       skipWaiting: true,
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "./public/favicon.ico", to: "" },
+        { from: "./public/manifest.json", to: "" },
+        { from: "./public/LOGO192.png", to: "" },
+        { from: "./public/LOGO512.png", to: "" },
+        { from: "./public/LOGO64.png", to: "" },
+      ],
     }),
   ],
   devServer: {
