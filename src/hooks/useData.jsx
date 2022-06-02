@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGet } from "./useGet";
 import initialState from "../initialState";
 
@@ -8,32 +8,34 @@ const useData = () => {
     const [trending, setTrending] = useState([]);
     const [loading, setLoading] = useState(true);
     const [state, setState] = useState(initialState);
-    const callMovies = "/discover/movie";
-    const callSeries = "/discover/tv";
-    const callTrending = "/trending/all/day";
+    const [search, setSearch] = useState("");
+    const callMovies = search ? "/search/movie?" + search : "/discover/movie";
+    const callSeries = search ? "/search/movie?query=" + search : "/discover/tv";
+    const callTrending = search ? "/search/movie?query=" + search : "/trending/all/day";
 
     //call the movies
     useEffect(() => {
         useGet(callMovies).then(data => {
             setMovies(data.results);
         })
-    }, [])
+    }, [search])
 
     //call the series
     useEffect(() => {
         useGet(callSeries).then(data => {
             setSeries(data.results);
         })
-    }, [])
+    }, [search])
 
     //call the trending
     useEffect(() => {
         useGet(callTrending).then(data => {
+            setLoading(true);
             setTrending(data.results);
             setLoading(false);
-            console.log(data.results);
+            //console.log(data.results);
         })
-    }, [])
+    }, [search])
 
     //Select the movie
     const toSelect = payload => {
@@ -43,6 +45,15 @@ const useData = () => {
         });
     };
 
+    //Sarch
+    const inputRef = useRef(null);
+
+    const handleSearch = () => {
+        setSearch(inputRef.current.value);
+        //console.log(search);
+    };
+
+
     return ({
         movies,
         loading,
@@ -50,6 +61,9 @@ const useData = () => {
         toSelect,
         series,
         trending,
+        search,
+        handleSearch,
+        inputRef
     });
 };
 
