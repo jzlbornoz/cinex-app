@@ -54,9 +54,9 @@ table {
 }
 
 :root{
-    --color2: #0e0e52;
-    --color1: #0a0a0a;
-    --color3: #f7f7f7;
-    --color4: #212529;
-    --color5: #0d6efd;
+    --color2: #b4b4b4;
+    --color3: #0a0a0a;
+    --color1: #f7f7f7;
+    --color4: #001020;
+    --color5: #66a3ff;
 };

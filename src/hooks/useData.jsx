@@ -9,7 +9,7 @@ const useData = () => {
     const [loading, setLoading] = useState(true);
     const [state, setState] = useState(initialState);
     const [search, setSearch] = useState("");
-    const callMovies = search ? "/search/movie?" + search : "/discover/movie";
+    const callMovies = "/discover/movie";
     const callSeries = search ? "/search/movie?query=" + search : "/discover/tv";
     const callTrending = search ? "/search/movie?query=" + search : "/trending/all/day";
 

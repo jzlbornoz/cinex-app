@@ -8,40 +8,33 @@
 
 .Landing a{
     text-decoration: none;
-    color: var(--color3);
+    color: var(--color1);
+}
+.Landing-header{
+    font-size: 28px;
+    padding: 10px;
 }
 
+.Landing-header span{
+    color: var(--color5);
+}
 .Landing-menu {
-    height: 30vh;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    padding: 10px;
-
+    padding: 15px 0px 10px 0px;
 }
 
 .Landing-menu div {
     width: 100%;
-    font-size: 25px;
-    height: 10vh;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 900;
+    padding: 10px;
+    background: var(--color5);
+    border-radius: 10px;
 }
 
-.Landing-movies {
-    background-color: #42378f;
-background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
-    border-radius: 20px;
-}
-
-.Landing-series {
-    background-color: #c73e1d;
-background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
-
-    border-radius: 20px;
-}
 
 .Landing h1{
     font-size: 30px;
@@ -50,11 +43,10 @@ background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%)
 }
 
 .Landing-grid{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10%;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(200px, auto);
 }
 
 .Landing-search{

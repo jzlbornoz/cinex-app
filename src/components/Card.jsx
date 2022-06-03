@@ -13,6 +13,7 @@ const Card = ({ film }) => {
             <section className="Card" >
                 <LazyLoadImage src={placeholder(film.poster_path, 300)} />
                 <div className='Card-title'><h3>{film.title ? film.title : film.name}</h3></div>
+                <div className='Card-vote'><p>{film.vote_average}</p></div>
             </section>
         </Link>
     )
