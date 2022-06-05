@@ -8,10 +8,7 @@ import '../style/components/Billboard.css';
 
 const BillboardMovies = () => {
 
-    const { movies, toSelect, series,  } = useContext(AppContext);
-    const handleSelect = item => () => {
-        toSelect(item);
-    }
+    const { movies, handleSelect } = useContext(AppContext);
 
     if (movies.length >= 20) {
         return (
@@ -19,17 +16,7 @@ const BillboardMovies = () => {
                 <p>MOVIES</p>
                 <div className="Billboard-grid">
                     {movies.map(movie => (
-                        <div key={movie.id} onClick={handleSelect(movie)}>
-                            <Card film={movie} />
-                        </div>
-                    ))}
-                </div>
-                <p>SERIES</p>
-                <div className="Billboard-grid">
-                    {series.map(serie => (
-                        <div key={serie.id} onClick={handleSelect(serie)} >
-                            <Card film={serie} />
-                        </div>
+                        <Card film={movie} key={movie.id} handleSelect={handleSelect} />
                     ))}
                 </div>
             </section>

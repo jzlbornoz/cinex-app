@@ -35,7 +35,7 @@ const Landing = () => {
                     <Link to='/billboard/movies'><div className="Landing-movies">MOVIES</div></Link>
                     <Link to='/billboard/series'><div className="Landing-series">SERIES</div></Link>
                 </section>
-                <section className='Landing-grid'>
+                <section>
                     <Favorites />
                 </section>
                 <h1>POPULAR</h1>

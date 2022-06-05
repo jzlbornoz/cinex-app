@@ -61,9 +61,8 @@ const useData = () => {
         });
     };
     const handleFavorite = item => () => {
-            addToFavorites(item);
-            setHeart(true); // Este parametro lo recibe la funcion en el componente favorite para lograr que la clase solo 
-    };                      // se cambie en los favoritos
+            addToFavorites(item); // Este parametro lo recibe la funcion en el componente favorite para lograr que la clase solo 
+    };                            // se cambie en los favoritos
     
 
     //Sarch
@@ -72,6 +71,11 @@ const useData = () => {
     const handleSearch = () => {
         setSearch(inputRef.current.value);
     };
+
+    //Placeholder de los posters
+    const placeholder = (path, width) => {
+        return path ? `https://image.tmdb.org/t/p/w${width}` + path : "http://www.proedsolutions.com/wp-content/themes/micron/images/placeholders/placeholder_large.jpg"
+    } 
 
     return ({
         movies,
@@ -85,6 +89,7 @@ const useData = () => {
         inputRef,
         handleFavorite,
         heart,
+        placeholder
     });
 };
 
