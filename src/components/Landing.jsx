@@ -4,20 +4,22 @@ import { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import { Loading } from './Loading';
 import { Card } from "../components/Card";
+import { Favorites } from './Favorites';
 import "../style/components/Landing.css";
 
 const Landing = () => {
+
     const { loading,
         trending,
-        toSelect,
+        handleSelect,
         search,
         handleSearch,
         inputRef,
-        movies,
     } = useContext(AppContext);
-    const handleSelect = item => () => {
-        toSelect(item);
-    }
+
+    
+
+
     return (
         <section className="Landing">
             {!loading ? <section className='Landing-wrapped' data-aos="fade-up" >
@@ -34,20 +36,12 @@ const Landing = () => {
                     <Link to='/billboard/series'><div className="Landing-series">SERIES</div></Link>
                 </section>
                 <section className='Landing-grid'>
-                    <div onClick={handleSelect(movies[9])}>
-                        <Card film={movies[9]} />
-                    </div>
-                    <div onClick={handleSelect(movies[7])}>
-                        <Card film={movies[7]} />
-                    </div>
-
+                    <Favorites />
                 </section>
                 <h1>POPULAR</h1>
                 <section className='Landing-grid'>
                     {trending.length >= 1 ? trending.map(film => (
-                        <div key={film.id} onClick={handleSelect(film)}>
-                            <Card film={film} />
-                        </div>
+                            <Card film={film} handleSelect={handleSelect} key={film.id} />
                     )) : <Loading />}
                 </section>
 

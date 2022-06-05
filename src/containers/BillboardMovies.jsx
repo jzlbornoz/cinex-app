@@ -8,10 +8,11 @@ import '../style/components/Billboard.css';
 
 const BillboardMovies = () => {
 
-    const { movies, toSelect, series } = useContext(AppContext);
+    const { movies, toSelect, series,  } = useContext(AppContext);
     const handleSelect = item => () => {
         toSelect(item);
     }
+
     if (movies.length >= 20) {
         return (
             <section className='Billboard' data-aos="fade-up">

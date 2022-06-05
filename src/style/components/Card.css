@@ -29,6 +29,7 @@
 }
 .Card-title h3{
     font-size: 12px;
+    color: var(--color3);
 }
 
 .Card-vote{

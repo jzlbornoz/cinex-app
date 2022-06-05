@@ -3,12 +3,17 @@ import { useGet } from "./useGet";
 import initialState from "../initialState";
 
 const useData = () => {
+    //Se guardan los datos llamados de la api
     const [movies, setMovies] = useState([]);
     const [series, setSeries] = useState([]);
     const [trending, setTrending] = useState([]);
+    // Estado de carga
     const [loading, setLoading] = useState(true);
+    //Estados para la funcionalidades del buscador favoritos
     const [state, setState] = useState(initialState);
     const [search, setSearch] = useState("");
+    const [heart, setHeart] = useState(false);
+    //Llamados a la api
     const callMovies = "/discover/movie";
     const callSeries = search ? "/search/movie?query=" + search : "/discover/tv";
     const callTrending = search ? "/search/movie?query=" + search : "/trending/all/day";
@@ -44,26 +49,42 @@ const useData = () => {
             selected: [payload],
         });
     };
+    const handleSelect = item => {
+        toSelect(item);
+    }
+
+    //Add to favorites
+    const addToFavorites = payload => {
+        setState({
+            ...state,
+            favorites: [...state.favorites, payload],
+        });
+    };
+    const handleFavorite = item => () => {
+            addToFavorites(item);
+            setHeart(true); // Este parametro lo recibe la funcion en el componente favorite para lograr que la clase solo 
+    };                      // se cambie en los favoritos
+    
 
     //Sarch
     const inputRef = useRef(null);
 
     const handleSearch = () => {
         setSearch(inputRef.current.value);
-        //console.log(search);
     };
-
 
     return ({
         movies,
         loading,
         state,
-        toSelect,
+        handleSelect,
         series,
         trending,
         search,
         handleSearch,
-        inputRef
+        inputRef,
+        handleFavorite,
+        heart,
     });
 };
 
