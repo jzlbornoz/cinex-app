@@ -12,3 +12,14 @@
     margin-right: 15px;
 }
 
+.Favorite-content{
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.Favorite-content span{
+    color: var(--color5);
+    font-weight: 800;
+}
+

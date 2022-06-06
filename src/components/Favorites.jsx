@@ -15,8 +15,9 @@ const Favorites = () => {
             <div className='Favorite-list'>
                 <h2>Favorites</h2>
                 {favorites.length > 0 ? < FavoriteItem item={favorites[0]} />
-                    : <h3>NO HAY</h3>}
-            </div>
+                    : <div className='Favorite-empty'><i className="fa-solid fa-bookmark" /></div> }
+                {favorites.length > 1 && <FavoriteItem item={favorites[1]} />}
+                </div>
         </section>
     )
 }

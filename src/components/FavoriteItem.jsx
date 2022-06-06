@@ -9,7 +9,7 @@ const FavoriteItem = ({ item }) => {
             <img src={placeholder(item.poster_path, 300)} alt="LOGO" />
             <div className='Favorite-content'>
             <p> {item.title || item.name}</p>
-            <p>{item.vote_average}</p>
+            <span>{item.vote_average}</span>
             </div>
         </section>
     )
