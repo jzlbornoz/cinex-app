@@ -16,7 +16,7 @@ const BillboardMovies = () => {
                 <h2>MOVIES</h2>
                 <div className="Billboard-grid">
                     {movies.map(movie => (
-                        <Card film={movie} key={movie.id} handleSelect={handleSelect} />
+                        <Card film={movie} key={movie.id} handleSelect={handleSelect} withHear={true} />
                     ))}
                 </div>
             </section>

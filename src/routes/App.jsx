@@ -9,6 +9,7 @@ import { Error } from '../containers/Error';
 import { Review } from '../containers/Review';
 import { BillboardSeries } from '../containers/BillboardSeries';
 import { BillboardMovies } from '../containers/BillboardMovies';
+import { FavoritesPage } from '../containers/FavoritesPage';
 import './App.css';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
                         <Route exact path="/billboard/series" element={<BillboardSeries />} />
                         <Route exact path="/billboard/movies" element={<BillboardMovies />} />
                         <Route exact path="/review" element={<Review />} />
+                        <Route exact path="/favorites/page" element={<FavoritesPage />} />
                         <Route path="*" element={<Error />} />
                     </Routes>
                     <Footer />

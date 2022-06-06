@@ -1,0 +1,16 @@
+.FavoritesPage{
+    background-color: var(--color2);
+    min-height: 90vh;
+}
+.FavoritesPage h2{
+   text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    color: var(--color1);
+}
+.FavoritePage-wrapped{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
