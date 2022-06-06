@@ -62,7 +62,7 @@ const Landing = () => {
                     <h1>POPULAR</h1>
                     <section className='Landing-grid'>
                         {trending.length >= 1 ? trending.map(film => (
-                            <Card film={film} handleSelect={handleSelect} key={film.id} withHear={true} />
+                            <Card film={film} handleSelect={handleSelect} key={film.id} withHeart={true} />
                         )) : <Loading />}
                     </section>
 

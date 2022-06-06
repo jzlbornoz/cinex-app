@@ -53,17 +53,20 @@ const useData = () => {
         toSelect(item);
     }
 
-    //Add to favorites
+   // For handleFavorite at card
     const addToFavorites = payload => {
         setState({
             ...state,
             favorites: [...state.favorites, payload],
         });
     };
-    const handleFavorite = item => () => {
-            addToFavorites(item); // Este parametro lo recibe la funcion en el componente favorite para lograr que la clase solo 
-    };                            // se cambie en los favoritos
-    
+
+    const revomeFromFavorite = payload => {
+        setState({
+            ...state,
+            favorites: state.favorites.filter(items => items.id !== payload.id),
+        })
+    }
 
     //Sarch
     const inputRef = useRef(null);
@@ -75,7 +78,7 @@ const useData = () => {
     //Placeholder de los posters
     const placeholder = (path, width) => {
         return path ? `https://image.tmdb.org/t/p/w${width}` + path : "http://www.proedsolutions.com/wp-content/themes/micron/images/placeholders/placeholder_large.jpg"
-    } 
+    }
 
     return ({
         movies,
@@ -87,9 +90,11 @@ const useData = () => {
         search,
         handleSearch,
         inputRef,
-        handleFavorite,
         heart,
-        placeholder
+        setHeart,
+        placeholder,
+        addToFavorites, 
+        revomeFromFavorite
     });
 };
 
