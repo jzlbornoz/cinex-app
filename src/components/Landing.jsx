@@ -18,7 +18,7 @@ const Landing = () => {
     } = useContext(AppContext);
 
 
-    if (search.length > 0) {
+    if (search.length > 0) { // Estructura de decision para que cuando se busque algo, los resultados aparezcan en toda la pantalla
         return (
             <section className="Landing">
                 {!loading ? <section className='Landing-wrapped' data-aos="fade-up" >
@@ -56,7 +56,7 @@ const Landing = () => {
                         <Link to='/billboard/movies'><div className="Landing-movies">MOVIES</div></Link>
                         <Link to='/billboard/series'><div className="Landing-series">SERIES</div></Link>
                     </section>
-                    <section>
+                    <section className='Landing-favorites'>
                         <Favorites />
                     </section>
                     <h1>POPULAR</h1>

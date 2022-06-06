@@ -13,7 +13,7 @@ const BillboardMovies = () => {
     if (movies.length >= 20) {
         return (
             <section className='Billboard' data-aos="fade-up">
-                <p>MOVIES</p>
+                <h2>MOVIES</h2>
                 <div className="Billboard-grid">
                     {movies.map(movie => (
                         <Card film={movie} key={movie.id} handleSelect={handleSelect} />

@@ -7,7 +7,7 @@ const BillboardSeries = () => {
     const { handleSelect, series } = useContext(AppContext);
     return (
         <section className='Billboard'>
-            <p>SERIES</p>
+            <h2>SERIES</h2>
             <div className="Billboard-grid">
                 {series.map(serie => (
                     <Card film={serie} key={serie.id} handleSelect={handleSelect} />

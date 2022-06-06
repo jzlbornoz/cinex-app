@@ -1,13 +1,14 @@
 .Favorite-item{
-    width: 85%;
+    width: 80%;
+    height: 60px;
     display: flex;
     border-radius: 15px;
     box-shadow: 10px 15px 44px -12px rgba(0,0,0,0.65);
 }
 
 .Favorite-item img {
-    height: 80px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     border-radius: 15px;
     margin-right: 15px;
 }
