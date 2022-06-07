@@ -20,7 +20,8 @@
 }
 .Landing-header{
     font-size: 28px;
-    padding: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
 }
 
 .Landing-header span{
@@ -85,4 +86,11 @@
 .Landing-search input::placeholder{
     color: var(--color3);
     font-weight: lighter;
+}
+
+@media (min-width: 1000px){
+    .Landing-favorites{
+        height: 45vh;
+        width: 100%;
+    }
 }

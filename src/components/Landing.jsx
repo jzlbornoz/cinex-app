@@ -27,7 +27,7 @@ const Landing = () => {
                     </h2>
                     </div>
                     <div className="Landing-search">
-                        <input type="text" placeholder='Buscar'
+                        <input type="text" placeholder='Search'
                             ref={inputRef} value={search} onChange={handleSearch} />
                     </div>
                     <h1>RESULTS</h1>

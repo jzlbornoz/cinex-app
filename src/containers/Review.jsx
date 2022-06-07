@@ -7,6 +7,7 @@ const Review = () => {
   const { state } = useContext(AppContext);
   const { selected } = state;
   const Img = "https://image.tmdb.org/t/p/w300";
+  const youtubeAPI = 'https://www.youtube.com/results?search_query=';
 
   if (selected.length > 0) {
     return (
@@ -22,14 +23,17 @@ const Review = () => {
               <p><b>Popularity: </b> {movie.popularity}</p><br />
               <p><b>Vote Average:</b> {movie.vote_average}</p>
             </div>
+            <a href={youtubeAPI + movie.title}>
+              <div className="Review-button"><p>Watch</p> <i className="fa-solid fa-play" /></div>
+            </a>
           </section>
         ))}
       </section>
     )
-  }else{
+  } else {
     return <Error />
   }
-  
+
 }
 
 export { Review }

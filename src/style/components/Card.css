@@ -59,3 +59,14 @@
 .red{
     color: brown;
 }
+
+@media (min-width: 1000px){
+    .Card{
+        width: 15vw;
+        height: 27vh;
+    }
+    .Card img{
+        width: 15vw;
+        height: 18vh;
+    }
+}
