@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useGet } from "./useGet";
 import initialState from "../initialState";
+import { useLocalStorage } from "./useLocalStorage";
 
 const useData = () => {
     //Se guardan los datos llamados de la api
@@ -10,7 +11,7 @@ const useData = () => {
     // Estado de carga
     const [loading, setLoading] = useState(true);
     //Estados para la funcionalidades del buscador favoritos
-    const [state, setState] = useState(initialState);
+    const [state, setState] = useLocalStorage("SELECTED_V1" , initialState);
     const [search, setSearch] = useState("");
     const [heart, setHeart] = useState(false);
     //Llamados a la api

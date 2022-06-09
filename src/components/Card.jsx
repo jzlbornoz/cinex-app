@@ -7,19 +7,20 @@ import { AppContext } from '../context/AppContext';
 const Card = ({ film, handleSelect, withHeart }) => { //withHeart es para elegir cuando poner el corazon y cuando no
 
     const { placeholder, addToFavorites, revomeFromFavorite } = useContext(AppContext);
-    const handleColor = () => {
-        if (heartColor === 'Card-favorite') {
-            setHeartColor('Card-favorite red');
-        } else {
-            setHeartColor('Card-favorite');
-        }
-    };
+
     const [heartColor, setHeartColor] = useState('Card-favorite'); // change the heart's color after add to favorite
     const handleFavorite = item => {
         if (heartColor === 'Card-favorite') {
             addToFavorites(item);
         } else {
             revomeFromFavorite(item);
+        }
+    };
+    const handleColor = () => {
+        if (heartColor === 'Card-favorite') {
+            setHeartColor('Card-favorite red');
+        } else {
+            setHeartColor('Card-favorite');
         }
     };
 
