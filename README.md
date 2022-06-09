@@ -26,6 +26,5 @@ PWA en la que puedes ver y explorar una infinidad de peliculas y series, utiliza
 * `npm install`
 * `npm start`
 
-## Licencia
-
-MIT
+## APP
+https://cinex0.firebaseapp.com/
