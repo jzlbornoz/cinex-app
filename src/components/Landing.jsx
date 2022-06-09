@@ -17,10 +17,11 @@ const Landing = () => {
         inputRef,
     } = useContext(AppContext);
 
-
-    if (search.length > 0) { // Estructura de decision para que cuando se busque algo, los resultados aparezcan en toda la pantalla
+    // Estructura de decision para que cuando se busque algo, los resultados aparezcan en toda la pantalla
+    if (search.length > 0) {
         return (
             <section className="Landing">
+
                 {!loading ? <section className='Landing-wrapped' data-aos="fade-up" >
                     <div className='Landing-header'><h2>Explore and find <br /> your best option
                         for <span>Entertainement</span>
@@ -30,20 +31,22 @@ const Landing = () => {
                         <input type="text" placeholder='Search'
                             ref={inputRef} value={search} onChange={handleSearch} />
                     </div>
-                    <h1>RESULTS</h1>
 
+                    <h1>RESULTS</h1>
                     {trending.length >= 1 ? <section className='Landing-grid'>
                         {trending.map(film => (
-                            <Card film={film} handleSelect={handleSelect} key={film.id} withHeart={true}/>
+                            <Card film={film} handleSelect={handleSelect} key={film.id} withHeart={true} />
                         ))}
                     </section> : <Loading />}
 
                 </section> : <Loading />}
+
             </section >
         )
     } else {
         return (
             <section className="Landing">
+
                 {!loading ? <section className='Landing-wrapped' data-aos="fade-up" >
                     <div className='Landing-header'><h2>Explore and find <br /> your best option
                         for <span>Entertainement</span>
@@ -66,13 +69,11 @@ const Landing = () => {
                             <Card film={film} handleSelect={handleSelect} key={film.id} withHeart={true} />
                         )) : <Loading />}
                     </section>
-
                 </section> : <Loading />}
+
             </section >
         )
     }
 }
-
-
 
 export { Landing }

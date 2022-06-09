@@ -7,7 +7,6 @@ import '../style/components/Billboard.css';
 
 
 const BillboardMovies = () => {
-
     const { movies, handleSelect } = useContext(AppContext);
 
     if (movies.length >= 20) {
@@ -24,8 +23,6 @@ const BillboardMovies = () => {
     } else {
         return <Loading />
     }
-
-
 }
 
 

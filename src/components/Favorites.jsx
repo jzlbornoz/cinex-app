@@ -7,10 +7,8 @@ import '../style/components/Favorites.css';
 
 
 const Favorites = () => {
-
     const { state } = useContext(AppContext);
     const { favorites } = state;
-
     return (
         <section className='Favorites'>
             <h2>Favorites</h2>

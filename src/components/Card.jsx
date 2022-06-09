@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { AppContext } from '../context/AppContext';
 
-const Card = ({ film, handleSelect, withHeart }) => { //withHeart es para elegir cuando poner el corazon y cuando no
+const Card = ({ film, handleSelect, withHeart }) => {
+    //withHeart es para elegir cuando poner el corazon y cuando no
 
     const { placeholder, addToFavorites, revomeFromFavorite } = useContext(AppContext);
+    const [heartColor, setHeartColor] = useState('Card-favorite');
+    // Cambia el color del corazon luego de agregarse a favoritos, luego de agregarse a favoritos
 
-    const [heartColor, setHeartColor] = useState('Card-favorite'); // Cambia el color del corazon luego de agregarse a favoritos                                                              //luego de agregarse a favoritos
     const handleFavorite = item => {
         if (heartColor === 'Card-favorite') {
             addToFavorites(item);
@@ -16,6 +18,7 @@ const Card = ({ film, handleSelect, withHeart }) => { //withHeart es para elegir
             revomeFromFavorite(item);
         }
     };
+    
     const handleColor = () => {
         if (heartColor === 'Card-favorite') {
             setHeartColor('Card-favorite red');
