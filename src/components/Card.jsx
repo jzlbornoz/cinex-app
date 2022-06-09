@@ -8,7 +8,7 @@ const Card = ({ film, handleSelect, withHeart }) => { //withHeart es para elegir
 
     const { placeholder, addToFavorites, revomeFromFavorite } = useContext(AppContext);
 
-    const [heartColor, setHeartColor] = useState('Card-favorite'); // change the heart's color after add to favorite
+    const [heartColor, setHeartColor] = useState('Card-favorite'); // Cambia el color del corazon luego de agregarse a favoritos                                                              //luego de agregarse a favoritos
     const handleFavorite = item => {
         if (heartColor === 'Card-favorite') {
             addToFavorites(item);

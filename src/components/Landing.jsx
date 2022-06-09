@@ -31,11 +31,12 @@ const Landing = () => {
                             ref={inputRef} value={search} onChange={handleSearch} />
                     </div>
                     <h1>RESULTS</h1>
-                    <section className='Landing-grid'>
-                        {trending.length >= 1 ? trending.map(film => (
-                            <Card film={film} handleSelect={handleSelect} key={film.id} />
-                        )) : <Loading />}
-                    </section>
+
+                    {trending.length >= 1 ? <section className='Landing-grid'>
+                        {trending.map(film => (
+                            <Card film={film} handleSelect={handleSelect} key={film.id} withHeart={true}/>
+                        ))}
+                    </section> : <Loading />}
 
                 </section> : <Loading />}
             </section >
