@@ -44,10 +44,13 @@ createRoot(
 
 </html>
 
+
 ===webpack and babel(presets, plugins and loaders)===
 1. ~npm install webpack webpack-cli webpack-dev-server --save --include=dev
-2. npm install html-webpack-plugin html-loader --save
-3. npm install babel-loader @babel/preset-env @babel/preset-react @babel/core --save --include=dev
+2. ~npm install html-webpack-plugin html-loader --save
+3. ~npm install babel-loader @babel/preset-env @babel/preset-react @babel/core --save --include=dev
+
+
 
 ===Set up Webpack===
 1. Create 'webpack.config.js'
@@ -114,13 +117,17 @@ module.exports = {
   },
 };
 
+
+
 === Loaders CSS ===
-1. npm install css-loader mini-css-extract-plugin --save --include=dev
+1. ~npm install css-loader mini-css-extract-plugin --save --include=dev
 2. create 'style' folder in 'src'
 
+
+
 === Development flow ===
-1. npm install -g eslint
-2. npm install eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
+1. ~npm install -g eslint
+2. ~npm install eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
 3. Create'.eslintrc'
 {
     "extends": [
@@ -160,7 +167,7 @@ module.exports = {
     "parser": "babel-eslint"
   }
 
-4. npm install prettier eslint-plugin-prettier eslint-config-prettier
+4. ~npm install prettier eslint-plugin-prettier eslint-config-prettier
 5. add the scripts in package.json
 "format": "prettier --write {*.js,src/**/*.{js,jsx}}",
     "lint": "eslint src/ --fix"
@@ -174,8 +181,13 @@ module.exports = {
 
 7. npm start
 
+
+
+
 === AOS ===
--npm install aos --save
+~ npm install aos --save
+
+
 
 ==== Deploy to production ====
 1. sudo npm install -g firebase-tools
@@ -186,6 +198,8 @@ module.exports = {
 6. firebase login:ci
 7. create the secret in the repository
 8. commit
+
+
 
 === ADD the manifest for PWA ===
 1. create 'manifest.json' in public folder
@@ -222,10 +236,13 @@ module.exports = {
     <link rel="shortcut icon" href="../src/assets/LOGO192.png">
     <link rel="apple-touch-icon" href="../src/assets/LOGO512.png" />
 
+
+
+
   === INSTALACION REACT-ROUTER ===
-  1. npm install react-router-dom@6
+  1. ~npm install react-router-dom@6
   2. Create folder 'Routes' and move App
-  3. npm i source-map-loader
+  3. ~npm i source-map-loader
   4. add in dev dependencies
   5. add in rules in webpack config
   {
@@ -234,12 +251,18 @@ module.exports = {
     use: ['source-map-loader'],
   },
 
+
+
+
   === React Lazy Load Image Component ===
-  1. npm i --save react-lazy-load-image-component
+  1. ~npm i --save react-lazy-load-image-component
+
+
+
 
   === WORKBOX Service worker ===
   se implemento el service worker
-  1. npm install workbox-webpack-plugin --save-dev
+  1. ~npm install workbox-webpack-plugin --save-dev
   2.  Let's add the Workbox webpack plugin and adjust the webpack.config.js file:
     https://webpack.js.org/guides/progressive-web-application/
   3. create service-worker.js in src:
@@ -297,6 +320,8 @@ module.exports = function override(config, env) {
   return config;
 }
 
+
+
 === Se agrego el plugin para pasar los logos a produccion ===
 = Se tuvo problemas para que sea instalable, se tuvo que agregar el siguiente plugin
-- npm i copy-webpack-plugin -D
+- ~npm i copy-webpack-plugin -D

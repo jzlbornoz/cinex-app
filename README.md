@@ -1,15 +1,29 @@
 # CINEX APP
 
+PWA en la que puedes ver y explorar una infinidad de peliculas y series, utiliza la API de TheMovieDB para mostrar el contenido con su informacion, trailer y poder guardarlas en favoritos para poder revisarlas en otro momento.
 
-PWA que utiliza la API de TheMovieDB para mostrar Peliculas con su informacion. Algunas de las features que tiene son:
+
+## Features
 
 * Soporte Offline con Workbox
 * Add to Home Screen
-* Using ReactJs, webpack.
+* ReactJs, webpack.
+* Perisistencia de Datos
+* Enrutamiento con router-dom
+
+
+## Dependencies
+
+* Babel
+* Prettier
+* Aos
+* React-Router
+* WorkBox
+
 
 ## Scripts
 
-* `npm install` para instalar las dependencias
+* `npm install`
 * `npm start`
 
 ## Licencia
