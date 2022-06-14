@@ -32,7 +32,7 @@ const Landing = () => {
                             ref={inputRef} value={search} onChange={handleSearch} />
                     </div>
 
-                    <h1>RESULTS</h1>
+                    <h1>Results</h1>
                     {trending.length >= 1 ? <section className='Landing-grid'>
                         {trending.map(film => (
                             <Card film={film} handleSelect={handleSelect} key={film.id} withHeart={true} />
@@ -57,13 +57,13 @@ const Landing = () => {
                             ref={inputRef} value={search} onChange={handleSearch} />
                     </div>
                     <section className='Landing-menu'>
-                        <Link to='/billboard/movies'><div className="Landing-movies">MOVIES</div></Link>
-                        <Link to='/billboard/series'><div className="Landing-series">SERIES</div></Link>
+                        <Link to='/billboard/movies'><div className="Landing-movies">Movies</div></Link>
+                        <Link to='/billboard/series'><div className="Landing-series">Series</div></Link>
                     </section>
                     <section className='Landing-favorites'>
                         <Favorites />
                     </section>
-                    <h1>POPULAR</h1>
+                    <h1>Popular</h1>
                     <section className='Landing-grid'>
                         {trending.length >= 1 ? trending.map(film => (
                             <Card film={film} handleSelect={handleSelect} key={film.id} withHeart={true} />
