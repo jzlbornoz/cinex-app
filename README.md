@@ -1,24 +1,24 @@
 # CINEX APP
 
-PWA en la que puedes ver y explorar una infinidad de peliculas y series, utiliza la API de TheMovieDB para mostrar el contenido con su informacion, trailer y poder guardarlas en favoritos para poder revisarlas en otro momento.
+Entertainment Progressive Web App with a modern UI, powered by react | You can look and search a lot of movies, series and documents, calling data from MovieDB(API).
 
 
 ## Features
 
-* Soporte Offline con Workbox
-* Add to Home Screen
-* ReactJs, webpack.
-* Perisistencia de Datos
-* Enrutamiento con router-dom
-
+- Offline support
+- Persistence data with LocalStorage. 
+- Add to homeScreen.
+- Declarative routing
+- Services Worker powered with workbox 
 
 ## Dependencies
 
-* Babel
-* Prettier
-* Aos
-* React-Router
-* WorkBox
+-Babel
+-Prettier
+-Aos
+-React-Router
+-Webpack
+-Workbox 
 
 
 ## Scripts
@@ -26,5 +26,8 @@ PWA en la que puedes ver y explorar una infinidad de peliculas y series, utiliza
 * `npm install`
 * `npm start`
 
-## APP
+## App deployed:
 https://cinex0.firebaseapp.com/
+
+
+
