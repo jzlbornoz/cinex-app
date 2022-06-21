@@ -17,6 +17,10 @@ const Landing = () => {
         inputRef,
     } = useContext(AppContext);
 
+    const scrollTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+
+    // ---
+
     // Estructura de decision para que cuando se busque algo, los resultados aparezcan en toda la pantalla
     if (search.length > 0) {
         return (
@@ -57,8 +61,8 @@ const Landing = () => {
                             ref={inputRef} value={search} onChange={handleSearch} />
                     </div>
                     <section className='Landing-menu'>
-                        <Link to='/billboard/movies'><div className="Landing-movies">Movies</div></Link>
-                        <Link to='/billboard/series'><div className="Landing-series">Series</div></Link>
+                        <Link to='/billboard/movies' onClick={() => scrollTop()} ><div className="Landing-movies">Movies</div></Link>
+                        <Link to='/billboard/series' onClick={() => scrollTop()}><div className="Landing-series">Series</div></Link>
                     </section>
                     <section className='Landing-favorites'>
                         <Favorites />

@@ -18,7 +18,7 @@ const Card = ({ film, handleSelect, withHeart }) => {
             revomeFromFavorite(item);
         }
     };
-    
+
     const handleColor = () => {
         if (heartColor === 'Card-favorite') {
             setHeartColor('Card-favorite red');
@@ -27,9 +27,13 @@ const Card = ({ film, handleSelect, withHeart }) => {
         }
     };
 
+    const scrollTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+
+    // --- 
+
     return (
-        <section className="Card" >
-            <Link to='/review'>
+        <section className="Card">
+            <Link to='/review' onClick={() => scrollTop()}>
                 <LazyLoadImage src={placeholder(film.poster_path, 300)} onClick={() => handleSelect(film)} />
             </Link>
             <div className='Card-title'><h3>{film.title ? film.title : film.name}</h3></div>
